@@ -1,0 +1,167 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container to centralize the page and limit width */
+.container {
+    max-width: 900px; /* Limita el ancho máximo */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Asegura que el contenido adicional sea desplazable */
+}
+
+/* Header styling */
+header {
+    background-color: #110e2e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #202342;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    display: inline-block;
+    width: 150px; /* Ancho de los enlaces del nav */
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Agrega transición para efectos de hover */
+}
+
+nav a:hover {
+    color: #0003ac;
+    background-color: #555b9e;
+}
+
+nav div {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul {
+    display: none;
+    position: absolute;
+    background-color: #31355f;
+    padding: 10px;
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra para mejor visibilidad */
+}
+
+nav div:hover ul {
+    display: block;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+}
+
+/* Main section styling */
+section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Form and input fields */
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 80%; /* Tamaño de los campos de texto */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+/* Adjust button styles */
+button {
+    background-color: #491212;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Agrega transición para efectos de hover */
+}
+
+button:hover {
+    background-color: #470065;
+    color: #ffffff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Ajuste para pantallas medianas */
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%; /* Ajuste del tamaño de inputs en pantallas pequeñas */
+    }
+
+    nav a {
+        width: 120px; /* Ajuste del tamaño de los enlaces en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+
+    nav a {
+        width: 100px; /* Ajuste para dispositivos móviles */
+        padding: 8px;
+    }
+
+    nav ul {
+        width: 100%; /* Asegura que el menú desplegable ocupe el ancho completo en pantallas pequeñas */
+        box-shadow: none; /* Elimina la sombra en pantallas pequeñas si no es necesaria */
+    }
+
+    button {
+        padding: 12px; /* Ajusta el padding del botón para pantallas más pequeñas */
+        font-size: 14px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+}

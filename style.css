@@ -1,0 +1,237 @@
+html{
+    scroll-behavior: smooth; /* Habilita un desplazamiento suave al navegar */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
+}
+
+body {
+    background: #644141;
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía principal */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Altura total menos el tamaño del menú */
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 80px; /* Tamaño grande para el título */
+}
+
+.hero p {
+    font-size: 30px;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #fff;
+}
+
+.color-red {
+    color: red;
+}
+
+nav {
+    background: #3a0505;
+    height: 80px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; /* Sombra para darle profundidad */
+    display: flex;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+nav a {
+    flex: 1;
+    height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    transition: .2s ease-in-out all; /* Transición suave para los cambios de estilo */
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #ff0000;
+}
+
+nav .indicador {
+    width: 0px;
+    height: 7px;
+    background: #113cfc; /* Indicador azul debajo del enlace activo */
+    position: absolute;
+    bottom: 0;
+    transition: .3 ease-out all;
+}
+
+.seccion {
+    min-height: 100vh; /* Cada sección ocupa al menos el tamaño de la ventana */
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion .card {
+    background: #dedede; /* Fondo claro para las tarjetas */
+    height: 90%;
+    padding: 40px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; /* Sombra para efecto de profundidad */
+}
+
+.seccion h1 {
+    font-size: 48px; /* Tamaño grande para los títulos de las secciones */
+    margin-bottom: 20px;
+}
+
+.seccion p {
+    line-height: 38px;
+    margin-bottom: 40px;
+    color: #494949; /* Color de texto ligeramente oscuro */
+    font-size: 20px;
+}
+
+.seccion img {
+    width: 100%; /* Imágenes ocupan todo el ancho disponible */
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+
+.book {
+    cursor: pointer; /* Cambia el cursor al pasar por encima de los libros */
+}
+
+.book-img {
+    transition: transform 0.5s; /* Transición suave al hacer hover */
+    border: 2px solid rgb(195, 88, 0);
+}
+
+.book:hover .book-img {
+    transform: scale(1.1); /* Efecto de zoom al hacer hover sobre la imagen del libro */
+}
+
+#btnScrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+    display: none;
+    font-size: 24px;
+    border: none;
+    background-color: #392c2c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#btnScrollTop:hover {
+    background-color: #7c4b4b;
+}
+
+footer {
+    background-color: #3a0505;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media screen and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 24px;
+    }
+
+    .seccion h1 {
+        font-size: 40px;
+    }
+
+    .seccion p {
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    .seccion .card {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .seccion h1 {
+        font-size: 32px;
+    }
+
+    .seccion p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .seccion .card {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .seccion h1 {
+        font-size: 28px;
+    }
+
+    .seccion p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .seccion .card {
+        padding: 15px;
+    }
+}

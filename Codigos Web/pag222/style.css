@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-header {
+    background-color: #c42700;
+    width: 70%;
+    padding: 10px;
+}
+
+.right-header {
+    background-color: #fd8595;
+    width: 28%;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.totals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totals-right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.totals-right div {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    background-color: #f5f5dc;
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.btn-teal {
+    background-color: #ed4a47;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-blue {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-client {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product, .client {
+    width: 48%;
+}
+
+fieldset {
+    border: 1px solid #cd6969;
+    padding: 10px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
